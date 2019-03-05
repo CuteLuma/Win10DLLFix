@@ -6,7 +6,7 @@ using System.Security.Cryptography;
 
 namespace Win10DLL{
     class Program{
-        static public string DllURL = "http://45.77.162.176";
+        static public string DllURL = "https://github.com/SophiF/Win10DLLFix/blob/master";
         static Dictionary<int, string> DllInfo = new Dictionary<int, string>(){
             {1,"47d2843bfa6fee105abfcc4625bee8fbbfa0755c"},
             {2,"3f042363595b3c1aab3ed7a011ab1316955b1c70"},
@@ -66,7 +66,7 @@ namespace Win10DLL{
                 int DllDownload = GetDllDownload();
                 Console.WriteLine("{0}d3d9.dll v{1} detectada, baixando d3d9.dll v{2}", (char)16, DllDownload - 1, DllDownload);
                 using (var client = new WebClient()){
-                    client.DownloadFile(new Uri(DllURL + "/Dll/" + DllDownload + ".dll"), "d3d9.dll");
+                    client.DownloadFile(new Uri(DllURL + "/Dll/" + DllDownload + ".dll?raw=true"), "d3d9.dll");
                 }
                 Console.WriteLine("{0}d3d9.dll v{1} baixada com sucesso!", (char)16, DllDownload);
             }
