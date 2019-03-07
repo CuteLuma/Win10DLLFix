@@ -3,7 +3,6 @@ using System.IO;
 using System.Net;
 using System.Collections.Generic;
 using System.Security.Cryptography;
-
 namespace Win10DLL{
     class Program{
         static public string DllURL = "https://raw.githubusercontent.com/SophiF/Win10DLLFix/master";
@@ -16,7 +15,6 @@ namespace Win10DLL{
             {6,"757b3714859ec7844a7b3d1ad45cd92ab7e84b49"},
             {7,"1f9d45d797eaa063a24859ec2a5a97383b3ef932"}
         };
-
         static private void HeaderText(){
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             Console.ForegroundColor = ConsoleColor.Cyan;
@@ -43,8 +41,7 @@ namespace Win10DLL{
                 return 1;
             }
             int dllID = 0;
-            foreach(KeyValuePair<int, string> dllUnit in DllInfo)
-            {
+            foreach(KeyValuePair<int, string> dllUnit in DllInfo){
                 using(FileStream fs = new FileStream(@"d3d9.dll", FileMode.Open, FileAccess.Read))
                 using(var cryptoProvider = new SHA1CryptoServiceProvider()){
                     string hash = BitConverter.ToString(cryptoProvider.ComputeHash(fs)).ToLower().Replace("-", string.Empty);
@@ -55,8 +52,7 @@ namespace Win10DLL{
                     }
                 }
             }
-            if(dllID == 0 || dllID > 7)
-            {
+            if(dllID == 0 || dllID > 7){
                 return 1;
             }
             return dllID;
