@@ -68,13 +68,10 @@ namespace Win10DLL{
             }
             Console.WriteLine("{0} Pressione qualquer tecla para fechar esta janela...", (char)16);
         }
-        static private void DllFix(){
+        static void Main(string[] args){
             HeaderText();
             DllDownloading();
             Console.ReadKey();
-        }
-        static void Main(string[] args){
-            DllFix();
         }
     }
 }
