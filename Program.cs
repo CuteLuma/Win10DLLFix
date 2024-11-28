@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 namespace Win10DLL{
     class Program{
-        static public string DllURL = "https://raw.githubusercontent.com/Decanee/Win10DLLFix/master";
+        static public string DllURL = "https://raw.githubusercontent.com/mistwisp/Win10DLLFix/master";
         static Dictionary<int, string> DllInfo = new Dictionary<int, string>(){
             {1,"47d2843bfa6fee105abfcc4625bee8fbbfa0755c"}, {2,"3f042363595b3c1aab3ed7a011ab1316955b1c70"}, {3,"0cd7e7383b1c0bfd90f9c5e6f291c001d1ea9bc6"}, {4,"58d95f0907140a4b9fdac1b6c0c901be6f7d5b94"},
             {5,"0eebf3b27a72f82f2ad02fcb1710787e3bbdc5b7"}, {6,"757b3714859ec7844a7b3d1ad45cd92ab7e84b49"}, {7,"1f9d45d797eaa063a24859ec2a5a97383b3ef932"}
